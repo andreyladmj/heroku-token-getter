@@ -1,0 +1,5 @@
+django
+gunicorn
+django-heroku
+oauth2-client
+django-cors-headers

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="document.getElementById('csrf').submit()">
+<form action="{{ FORM_SUBMIT_URL }}" id="csrf" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+    <input type="hidden" name="authenticity_token" value="OY7mrLvXTzXyWhyWBQVgBMWTpKH0DbdCIedH4tOzygAjfPx+oImuFJI3JC3apEqHuk/GWpjUp08Rltg+FDOK5A==">
+    <input type="hidden" name="client_id" id="client_id" value="{{CLIENT_ID}}">
+    <input type="hidden" name="redirect_uri" id="redirect_uri" value="{{REDIRECT_URI}}">
+    <input type="hidden" name="state" id="state" value="state_test">
+    <input type="hidden" name="response_type" id="response_type" value="code">
+    <input type="hidden" name="scope" id="scope" value="email">
+    <input type="hidden" name="code_challenge" id="code_challenge">
+    <input type="hidden" name="code_challenge_method" id="code_challenge_method">
+    <input type="submit" name="commit" value="Authorize" class="btn btn-success btn-lg btn-block" data-disable-with="Authorize">
+</form>
+</body>
+</html>
